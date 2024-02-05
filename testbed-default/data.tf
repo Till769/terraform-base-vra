@@ -1,13 +1,11 @@
-data "openstack_networking_network_v2" "public" {
+data "vra_network" "public" {
   name = var.public
 }
 
-data "openstack_images_image_v2" "image" {
+data "vra_image" "image" {
   name        = var.image
-  most_recent = true
 }
 
-data "openstack_images_image_v2" "image_node" {
+data "vra_image" "image_node" {
   name        = var.image_node
-  most_recent = true
 }
